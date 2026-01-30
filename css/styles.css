@@ -1,0 +1,579 @@
+/* ============================================
+   PORTFOLIO MIGUEL PÉREZ SÁNCHEZ
+   Guía de Estilos aplicada
+   ============================================ */
+
+/* === IMPORTAR FUENTES === */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Helvetica+Neue:wght@400;500;700&display=swap');
+
+/* === VARIABLES CSS (Colores de la guía) === */
+:root {
+    /* Colores principales */
+    --azul-marino: #00788C;
+    --azul-cielo: #0cc0df;
+    --verde: #6df673;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    
+    /* Tonalidades oscuras */
+    --azul-marino-oscuro: #124e59;
+    --azul-cielo-oscuro: #0d9db6;
+    --verde-oscuro: #62d867;
+    
+    /* Tipografías */
+    --font-titulos: 'Orbitron', sans-serif;
+    --font-contenido: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* === RESET Y BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-contenido);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--negro);
+    background-color: var(--blanco);
+}
+
+/* === TIPOGRAFÍA === */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-titulos);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p, span, li, label, input, textarea, select {
+    font-family: var(--font-contenido);
+}
+
+/* === NAVBAR === */
+.navbar {
+    background-color: var(--azul-marino) !important;
+    padding: 0.5rem 1rem;
+    min-height: 80px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.navbar-brand span {
+    font-family: var(--font-titulos);
+    font-size: 1.2rem;
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+.navbar-toggler {
+    border-color: var(--azul-cielo);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(109, 246, 115, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-nav .nav-link {
+    color: var(--blanco) !important;
+    font-family: var(--font-contenido);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--verde) !important;
+    background-color: var(--azul-marino-oscuro);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--verde) !important;
+}
+
+/* Selector de idioma */
+.idioma-selector {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.idioma-selector a {
+    display: inline-block;
+}
+
+.idioma-selector img {
+    width: 28px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.idioma-selector img:hover {
+    border-color: var(--verde);
+    transform: scale(1.1);
+}
+
+/* === JUMBOTRON (recreado con utilidades) === */
+.jumbotron-custom {
+    background: linear-gradient(135deg, var(--azul-marino) 0%, var(--azul-marino-oscuro) 100%);
+    color: var(--blanco);
+    padding: 4rem 2rem;
+    margin-bottom: 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.jumbotron-custom::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, var(--azul-cielo) 0%, transparent 70%);
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.jumbotron-custom h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.jumbotron-custom .lead {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--azul-cielo);
+}
+
+.jumbotron-custom p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* === SECCIÓN CARACTERÍSTICAS (CARDS) === */
+.seccion-caracteristicas {
+    background-color: var(--blanco);
+    padding: 4rem 0;
+}
+
+.seccion-caracteristicas .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--azul-marino);
+}
+
+/* Cards personalizadas */
+.card-custom {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 120, 140, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+    background-color: var(--blanco);
+}
+
+.card-custom:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 120, 140, 0.25);
+}
+
+.card-custom .card-img-top {
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--azul-cielo);
+}
+
+.card-custom .card-body {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-custom .card-title {
+    font-family: var(--font-titulos);
+    font-size: 1.2rem;
+    color: var(--azul-marino);
+    margin-bottom: 1rem;
+}
+
+.card-custom .card-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Botón expandir (+) */
+.btn-expand {
+    background-color: var(--verde);
+    color: var(--negro);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-expand:hover {
+    background-color: var(--verde-oscuro);
+    transform: rotate(45deg);
+}
+
+.btn-expand[aria-expanded="true"] {
+    transform: rotate(45deg);
+    background-color: var(--azul-cielo);
+}
+
+.card-collapse-content {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--azul-cielo);
+}
+
+/* === CAROUSEL === */
+.carousel-custom {
+    margin-bottom: 0;
+}
+
+.carousel-custom .carousel-item img {
+    height: 350px;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.carousel-custom .carousel-caption {
+    background: rgba(0, 120, 140, 0.85);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    bottom: 20%;
+}
+
+.carousel-custom .carousel-caption h5 {
+    font-family: var(--font-titulos);
+    color: var(--verde);
+}
+
+.carousel-custom .carousel-caption p {
+    color: var(--blanco);
+    margin-bottom: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--azul-marino);
+    border-radius: 50%;
+    padding: 1.5rem;
+}
+
+/* === SECCIÓN PROYECTOS === */
+.seccion-proyectos {
+    background-color: #f4f9fa;
+    padding: 4rem 0;
+}
+
+.seccion-proyectos .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--azul-marino);
+}
+
+.proyecto-card {
+    background: var(--blanco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover {
+    transform: scale(1.02);
+}
+
+.proyecto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.proyecto-card .card-body {
+    padding: 1.5rem;
+}
+
+.proyecto-card .card-title {
+    font-family: var(--font-titulos);
+    color: var(--azul-marino);
+    font-size: 1.1rem;
+}
+
+.btn-ver-mas {
+    background-color: var(--azul-cielo);
+    color: var(--blanco);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+    background-color: var(--azul-marino);
+    color: var(--blanco);
+}
+
+/* === SECCIÓN CONTACTO === */
+.seccion-contacto {
+    background: linear-gradient(180deg, var(--blanco) 0%, #e8f4f6 100%);
+    padding: 4rem 0;
+}
+
+.seccion-contacto .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--azul-marino);
+}
+
+.sobre-mi-box {
+    background: var(--blanco);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--azul-cielo);
+}
+
+.sobre-mi-box h3 {
+    color: var(--azul-marino);
+    margin-bottom: 1rem;
+}
+
+/* Formulario */
+.form-contacto {
+    background: var(--blanco);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.form-contacto .form-label {
+    font-weight: 500;
+    color: var(--azul-marino);
+    margin-bottom: 0.5rem;
+}
+
+.form-contacto .form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-contacto .form-control:focus {
+    border-color: var(--azul-cielo);
+    box-shadow: 0 0 0 3px rgba(12, 192, 223, 0.2);
+}
+
+.form-contacto textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-enviar {
+    background-color: var(--verde);
+    color: var(--negro);
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-family: var(--font-titulos);
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.btn-enviar:hover {
+    background-color: var(--verde-oscuro);
+    transform: translateY(-2px);
+}
+
+/* === FOOTER === */
+footer {
+    background-color: var(--azul-marino-oscuro);
+    color: var(--blanco);
+    padding: 3rem 0 1.5rem;
+}
+
+footer h6 {
+    font-family: var(--font-titulos);
+    color: var(--verde);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+footer p, footer a {
+    color: var(--blanco);
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--verde);
+}
+
+.footer-map iframe {
+    border-radius: 8px;
+    border: 2px solid var(--azul-cielo);
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.footer-social i,
+.footer-social svg {
+    font-size: 1.2rem;
+    color: var(--azul-cielo);
+}
+
+.footer-logo img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+}
+
+.footer-copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+    opacity: 0.7;
+    font-size: 0.85rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 991.98px) {
+    .jumbotron-custom h1 {
+        font-size: 2.2rem;
+    }
+    
+    .jumbotron-custom .lead {
+        font-size: 1.2rem;
+    }
+    
+    .carousel-custom .carousel-item img {
+        height: 280px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar-brand span {
+        font-size: 1rem;
+    }
+    
+    .jumbotron-custom {
+        padding: 2.5rem 1rem;
+    }
+    
+    .jumbotron-custom h1 {
+        font-size: 1.8rem;
+    }
+    
+    .seccion-caracteristicas,
+    .seccion-proyectos,
+    .seccion-contacto {
+        padding: 2.5rem 0;
+    }
+    
+    .carousel-custom .carousel-item img {
+        height: 220px;
+    }
+    
+    .carousel-custom .carousel-caption {
+        display: none !important;
+    }
+    
+    footer .row > div {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.4rem; }
+    
+    .card-custom .card-img-top {
+        height: 150px;
+    }
+}
+
+/* === UTILIDADES ADICIONALES === */
+.text-verde {
+    color: var(--verde) !important;
+}
+
+.text-azul-cielo {
+    color: var(--azul-cielo) !important;
+}
+
+.text-azul-marino {
+    color: var(--azul-marino) !important;
+}
+
+.bg-azul-marino {
+    background-color: var(--azul-marino) !important;
+}
+
+.bg-azul-cielo {
+    background-color: var(--azul-cielo) !important;
+}
+
+.bg-verde {
+    background-color: var(--verde) !important;
+}

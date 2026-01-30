@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con Miguel Pérez Sánchez - Desarrollador Web">
+    <title>Contacto | Miguel Pérez Sánchez</title>
+
+    <link rel="icon" href="../img/LogoGrande.png" type="image/png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Links de navegación -->
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Logo y selector de idioma -->
+            <div class="d-flex align-items-center">
+                <div class="idioma-selector me-3">
+                    <a href="" title="Español">
+                        <img src="../img/Spain.png" alt="Español">
+                    </a>
+                    <a href="../en/contacto-en.html" title="English">
+                        <img src="../img/UK.png" alt="English">
+                    </a>
+                </div>
+                <a class="navbar-brand" href="index.html">
+                    <img src="../img/Logo.png" alt="Logo MPS - Miguel Pérez Sánchez">
+                    <span class="d-none d-md-inline">MPS</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== SECCIÓN CONTACTO ===================== -->
+    <main class="seccion-contacto">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-12">
+                    
+                    <!-- Sección Quiénes Somos -->
+                    <div class="sobre-mi-box">
+                        <h3>¿Quiénes soy?</h3>
+                        <p>Soy <strong>Miguel Pérez Sánchez</strong>, desarrollador web especializado en tecnologías front-end y back-end. Actualmente cursando el segundo año del ciclo formativo de Desarrollo de Aplicaciones Web (DAW) en Florida Universitaria, Valencia.</p>
+                        
+                        <p>Mi pasión por la tecnología me ha llevado a especializarme en el desarrollo de soluciones digitales innovadoras, combinando creatividad con conocimientos técnicos sólidos. A lo largo de mi formación, he adquirido experiencia en:</p>
+                        
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>HTML5, CSS3 y JavaScript moderno</li>
+                                    <li>Frameworks como Bootstrap y Vue.js</li>
+                                    <li>PHP y bases de datos MySQL</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Diseño de interfaces (UI/UX)</li>
+                                    <li>Control de versiones con Git</li>
+                                    <li>Metodologías ágiles de desarrollo</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <p class="mt-3">Mi objetivo es seguir creciendo profesionalmente y aportar valor a proyectos que marquen la diferencia en el mundo digital.</p>
+                    </div>
+                    
+                    <!-- Formulario de Contacto -->
+                    <div class="form-contacto mt-4">
+                        <h4 class="mb-4 text-azul-marino">Formulario de Contacto</h4>
+                        
+                        <form action="#" method="POST" id="formularioContacto">
+                            <div class="row">
+                                <!-- Campo Nombre -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="nombre" class="form-label">
+                                        Nombre completo <span class="text-danger" aria-hidden="true">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        id="nombre" 
+                                        name="nombre" 
+                                        placeholder="Ej: Juan García López"
+                                        required
+                                        aria-required="true"
+                                        autocomplete="name"
+                                    >
+                                </div>
+                                
+                                <!-- Campo Email -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">
+                                        Correo electrónico <span class="text-danger" aria-hidden="true">*</span>
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        class="form-control" 
+                                        id="email" 
+                                        name="email" 
+                                        placeholder="Ej: juan@ejemplo.com"
+                                        required
+                                        aria-required="true"
+                                        autocomplete="email"
+                                    >
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <!-- Campo Teléfono -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="telefono" class="form-label">
+                                        Teléfono
+                                    </label>
+                                    <input 
+                                        type="tel" 
+                                        class="form-control" 
+                                        id="telefono" 
+                                        name="telefono" 
+                                        placeholder="Ej: +34 600 000 000"
+                                        autocomplete="tel"
+                                    >
+                                </div>
+                                
+                                <!-- Campo Asunto -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="asunto" class="form-label">
+                                        Asunto <span class="text-danger" aria-hidden="true">*</span>
+                                    </label>
+                                    <select 
+                                        class="form-control form-select" 
+                                        id="asunto" 
+                                        name="asunto"
+                                        required
+                                        aria-required="true"
+                                    >
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option value="colaboracion">Propuesta de colaboración</option>
+                                        <option value="trabajo">Oferta de trabajo</option>
+                                        <option value="proyecto">Consulta sobre proyecto</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <!-- Campo Mensaje -->
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">
+                                    Mensaje <span class="text-danger" aria-hidden="true">*</span>
+                                </label>
+                                <textarea 
+                                    class="form-control" 
+                                    id="mensaje" 
+                                    name="mensaje" 
+                                    rows="5" 
+                                    placeholder="Escribe tu mensaje aquí..."
+                                    required
+                                    aria-required="true"
+                                ></textarea>
+                            </div>
+                            
+                            <!-- Checkbox Privacidad -->
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input 
+                                        class="form-check-input" 
+                                        type="checkbox" 
+                                        id="privacidad" 
+                                        name="privacidad"
+                                        required
+                                        aria-required="true"
+                                    >
+                                    <label class="form-check-label" for="privacidad">
+                                        He leído y acepto la <a href="#" class="text-azul-cielo">política de privacidad</a> <span class="text-danger" aria-hidden="true">*</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- Nota campos obligatorios -->
+                            <p class="text-muted mb-3">
+                                <small><span class="text-danger">*</span> Campos obligatorios</small>
+                            </p>
+                            
+                            <!-- Botón Enviar -->
+                            <button type="submit" class="btn btn-enviar">
+                                <i class="fas fa-paper-plane me-2" aria-hidden="true"></i> ENVIAR MENSAJE
+                            </button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- Columna 1: Mapa -->
+                <div class="col-md-3 col-sm-6 col-12 mb-3">
+                    <h6>¿Dónde encontrarme?</h6>
+                    <div class="footer-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.509620653227!2d-0.37487412382090535!3d39.45781431344284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6048cc56ee5c65%3A0xa52a97a3498ba7eb!2sFYM%20NETWORKING%2C%20SL!5e0!3m2!1ses!2ses!4v1769507092679!5m2!1ses!2ses"
+                            width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <p class="mt-2"><small>Florida Universitaria, Valencia</small></p>
+                </div>
+
+                <!-- Columna 2: Redes Sociales -->
+                <div class="col-md-3 col-sm-6 col-12 mb-3">
+                    <h6>Redes Sociales</h6>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/migueel_perezz/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+                        </a><br>
+                        <a href="https://www.facebook.com/Cristiano/?locale=es_LA" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-facebook" aria-hidden="true"></i> Facebook
+                        </a><br>
+                        <a href="https://x.com/elonmusk" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-x-twitter" aria-hidden="true"></i> X (Twitter)
+                        </a><br>
+                        <a href="https://www.linkedin.com/in/miguel-pérez-sánchez-210869331" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+                        </a><br>
+                        <a href="https://github.com/Perifulles" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna 3: Contacto -->
+                <div class="col-md-3 col-sm-6 col-12 mb-3">
+                    <h6>Contacto</h6>
+                    <p><i class="fas fa-phone me-2" aria-hidden="true"></i> +34 681 251 020</p>
+                    <p><i class="fas fa-envelope me-2" aria-hidden="true"></i> miguel.perez@example.com</p>
+                    <p><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i> Valencia, España</p>
+                </div>
+
+                <!-- Columna 4: Logo y Copyright -->
+                <div class="col-md-3 col-sm-6 col-12 mb-3 text-center footer-logo">
+                    <img src="../img/LogoFondo.png" alt="Logo MPS">
+                    <p class="mt-2"><strong>Miguel Pérez Sánchez</strong></p>
+                    <p><small>Desarrollador Web</small></p>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2025 Miguel Pérez Sánchez. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

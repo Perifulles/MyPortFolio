@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects by Miguel Pérez Sánchez - Web Development Portfolio">
+    <title>Projects | Miguel Pérez Sánchez</title>
+
+    <link rel="icon" href="../img/LogoGrande.png" type="image/png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+            <!-- Hamburger button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation links -->
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index-en.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="proyectos-en.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto-en.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Logo and language selector -->
+            <div class="d-flex align-items-center">
+                <div class="idioma-selector me-3">
+                    <a href="../es/proyectos.html" title="Español">
+                        <img src="../img/Spain.png" alt="Spanish">
+                    </a>
+                    <a href="proyectos-en.html" title="English">
+                        <img src="../img/UK.png" alt="English">
+                    </a>
+                </div>
+                <a class="navbar-brand" href="index-en.html">
+                    <img src="../img/Logo.png" alt="Logo MPS - Miguel Pérez Sánchez">
+                    <span class="d-none d-md-inline">MPS</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== CAROUSEL ===================== -->
+    <header class="carousel-custom">
+        <div id="carouselProyectos" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../img/BannerProf.png" class="d-block w-100" alt="Professional web development">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Professional Web Development</h5>
+                        <p>Creating innovative digital solutions</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/AppModernas.png" class="d-block w-100" alt="Modern applications">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Modern Applications</h5>
+                        <p>Cutting-edge technologies for the real world</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/BannerDisNN.png" class="d-block w-100" alt="Interface design">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Interface Design</h5>
+                        <p>Memorable user experiences</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyectos" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProyectos" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===================== PROJECTS SECTION ===================== -->
+    <main class="seccion-proyectos">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            
+            <!-- Row 1: Projects 1 and 2 with offset -->
+            <div class="row">
+                <div class="col-lg-4 offset-lg-2 col-md-6 col-12">
+                    <div class="card proyecto-card">
+                        <img src="../img/N8N.png" class="card-img-top" alt="Screenshot of the Automated Review Agent project with n8n">
+                        <div class="card-body">
+                            <h5 class="card-title">Automated Review Agent</h5>
+                            <p class="card-text">Intelligent system with n8n that automatically responds to reviews and generates visual reports for tourism companies.</p>
+                            <button class="btn btn-ver-mas" type="button" data-bs-toggle="modal" data-bs-target="#modalProyecto1">
+                                View more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card proyecto-card">
+                        <img src="../img/Suaventura.png" class="card-img-top" alt="Screenshot of the Tourism Company Website project">
+                        <div class="card-body">
+                            <h5 class="card-title">Tourism Company Web Portal</h5>
+                            <p class="card-text">Comprehensive development of a public website and back office for internal management of a tourism company.</p>
+                            <button class="btn btn-ver-mas" type="button" data-bs-toggle="modal" data-bs-target="#modalProyecto2">
+                                View more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Row 2: Projects 3 and 4 with offset -->
+            <div class="row mt-4">
+                <div class="col-lg-4 offset-lg-2 col-md-6 col-12">
+                    <div class="card proyecto-card">
+                        <img src="../img/reservas.png" class="card-img-top" alt="Screenshot of the Passenger Management project">
+                        <div class="card-body">
+                            <h5 class="card-title">Passenger Management Application</h5>
+                            <p class="card-text">System for counting passengers during the boarding process at a tourism company.</p>
+                            <button class="btn btn-ver-mas" type="button" data-bs-toggle="modal" data-bs-target="#modalProyecto3">
+                                View more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card proyecto-card">
+                        <img src="../img/CyC3.png" class="card-img-top" alt="Screenshot of the Air Conditioning Company Website project">
+                        <div class="card-body">
+                            <h5 class="card-title">HVAC Company Website</h5>
+                            <p class="card-text">Corporate website for an air conditioning company with product catalog and quote request functionality.</p>
+                            <button class="btn btn-ver-mas" type="button" data-bs-toggle="modal" data-bs-target="#modalProyecto4">
+                                View more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===================== PROJECT MODALS ===================== -->
+    
+    <!-- Modal Project 1 -->
+    <div class="modal fade" id="modalProyecto1" tabindex="-1" aria-labelledby="modalProyecto1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header bg-azul-marino text-white">
+                    <h5 class="modal-title" id="modalProyecto1Label">Automated Review Agent</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Project Description</h6>
+                    <p>Development of an intelligent agent using n8n that automates customer review management for a tourism sector company, generating personalized responses and creating comprehensive visual reports.</p>
+                    
+                    <h6>Methodologies Used</h6>
+                    <p>Workflow automation, API Integration, Data analysis</p>
+                    
+                    <h6>Technologies</h6>
+                    <p>n8n, Google Sheets API, Google Drive API, OpenAI API, Webhooks</p>
+                    
+                    <h6>Main Features</h6>
+                    <ul>
+                        <li>Automatic AI-powered response to customer reviews</li>
+                        <li>Integration with Google Sheets for data logging</li>
+                        <li>Automatic generation of satisfaction charts</li>
+                        <li>Review sentiment analysis</li>
+                        <li>Periodic reports sent automatically</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Project 2 -->
+    <div class="modal fade" id="modalProyecto2" tabindex="-1" aria-labelledby="modalProyecto2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header bg-azul-marino text-white">
+                    <h5 class="modal-title" id="modalProyecto2Label">Tourism Company Web Portal</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Project Description</h6>
+                    <p>Participation in the comprehensive development of a web platform for a tourism company, including the public site for customers and a complete back office system for internal management by employees.</p>
+                    
+                    <h6>Methodologies Used</h6>
+                    <p>Agile Development (Scrum), Team work, Version control with Git</p>
+                    
+                    <h6>Technologies</h6>
+                    <p>PHP, MySQL, HTML5, CSS3, JavaScript, Bootstrap 5</p>
+                    
+                    <h6>Main Features</h6>
+                    <ul>
+                        <li>Public website with tourism services catalog</li>
+                        <li>Online booking system for customers</li>
+                        <li>Back office for content management</li>
+                        <li>Booking and customer administration panel</li>
+                        <li>Responsive design adapted to all devices</li>
+                    </ul>
+                    
+                    <h6>Documentation</h6>
+                    <p>Project technical documentation, back office user manual.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Project 3 -->
+    <div class="modal fade" id="modalProyecto3" tabindex="-1" aria-labelledby="modalProyecto3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header bg-azul-marino text-white">
+                    <h5 class="modal-title" id="modalProyecto3Label">Passenger Management Application</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Project Description</h6>
+                    <p>Web application developed during the first year of DAW for a tourism company. The system allows managing passenger counting and control during the boarding process, ensuring all travelers are correctly registered before starting each trip.</p>
+                    
+                    <h6>Methodologies Used</h6>
+                    <p>Development from scratch without frameworks, structured programming, manual database management</p>
+                    
+                    <h6>Technologies</h6>
+                    <p>Pure PHP, MySQL, HTML5, CSS3</p>
+                    
+                    <h6>Main Features</h6>
+                    <ul>
+                        <li>Real-time passenger counting system</li>
+                        <li>Manual boarding registration per trip</li>
+                        <li>Passenger validation against reservation lists</li>
+                        <li>Vehicle capacity control</li>
+                        <li>Boarding history log</li>
+                    </ul>
+                    
+                    <h6>Project Value</h6>
+                    <p>This project demonstrates solid knowledge of web programming fundamentals. Being developed entirely by hand with pure PHP, without using frameworks or MVC architecture, it evidences the ability to build functional solutions from scratch and deeply understand how each part of the code works.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Project 4 -->
+    <div class="modal fade" id="modalProyecto4" tabindex="-1" aria-labelledby="modalProyecto4Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header bg-azul-marino text-white">
+                    <h5 class="modal-title" id="modalProyecto4Label">HVAC Company Website</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Project Description</h6>
+                    <p>Development of a corporate website for a company specialized in air conditioning and HVAC systems, aimed at attracting customers and showcasing their product and service catalog.</p>
+                    
+                    <h6>Methodologies Used</h6>
+                    <p>Responsive design, SEO optimized, UX/UI focused on conversion</p>
+                    
+                    <h6>Technologies</h6>
+                    <p>HTML5, CSS3, JavaScript, Bootstrap 5, PHP</p>
+                    
+                    <h6>Main Features</h6>
+                    <ul>
+                        <li>HVAC product catalog</li>
+                        <li>Quote request form</li>
+                        <li>Installation and maintenance services section</li>
+                        <li>Completed projects gallery</li>
+                        <li>Google Maps integration for location</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: Map -->
+                <div class="col-md-3 col-sm-6 col-12 mb-3">
+                    <h6>Where are we?</h6>
+                    <div class="footer-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.509620653227!2d-0.37487412382090535!3d39.45781431344284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6048cc56ee5c65%3A0xa52a97a3498ba7eb!2sFYM%20NETWORKING%2C%20SL!5e0!3m2!1ses!2ses!4v1769507092679!5m2!1ses!2ses"
+                            width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <p class="mt-2"><small>Florida Universitaria, Valencia</small></p>
+                </div>
+                
+                <!-- Column 2: Social Media -->
+                <div class="col-md-3 col-sm-6 col-12 mb-3">
+                    <h6>Social Media</h6>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/migueel_perezz/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+                        </a><br>
+                        <a href="https://www.facebook.com/Cristiano/?locale=es_LA" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-facebook" aria-hidden="true"></i> Facebook
+                        </a><br>
+                        <a href="https://x.com/elonmusk" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-x-twitter" aria-hidden="true"></i> X (Twitter)
+                        </a><br>
+                        <a href="https://www.linkedin.com/in/miguel-pérez-sánchez-210869331" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+                        </a><br>
+                        <a href="https://github.com/Perifulles" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 3: Contact -->
+                <div class="col-md-3 col-sm-6 col-12 mb-3">
+                    <h6>Contact</h6>
+                    <p><i class="fas fa-phone me-2" aria-hidden="true"></i> +34 681 251 020</p>
+                    <p><i class="fas fa-envelope me-2" aria-hidden="true"></i> miguel.perez@example.com</p>
+                    <p><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i> Valencia, Spain</p>
+                </div>
+                
+                <!-- Column 4: Logo and Copyright -->
+                <div class="col-md-3 col-sm-6 col-12 mb-3 text-center footer-logo">
+                    <img src="../img/LogoFondo.png" alt="Logo MPS">
+                    <p class="mt-2"><strong>Miguel Pérez Sánchez</strong></p>
+                    <p><small>Web Developer</small></p>
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>&copy; 2025 Miguel Pérez Sánchez. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
