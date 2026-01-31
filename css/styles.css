@@ -1,8 +1,3 @@
-/* ============================================
-   PORTFOLIO MIGUEL PÉREZ SÁNCHEZ
-   Guía de Estilos aplicada
-   ============================================ */
-
 /* === IMPORTAR FUENTES === */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Helvetica+Neue:wght@400;500;700&display=swap');
 
@@ -315,6 +310,7 @@ p, span, li, label, input, textarea, select {
     color: var(--azul-marino);
 }
 
+
 .proyecto-card {
     background: var(--blanco);
     border-radius: 12px;
@@ -322,6 +318,11 @@ p, span, li, label, input, textarea, select {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     margin-bottom: 2rem;
     transition: transform 0.3s ease;
+
+    /* igualar alturas */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .proyecto-card:hover {
@@ -332,16 +333,26 @@ p, span, li, label, input, textarea, select {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    flex: 0 0 auto;
 }
 
 .proyecto-card .card-body {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
 }
 
 .proyecto-card .card-title {
     font-family: var(--font-titulos);
     color: var(--azul-marino);
     font-size: 1.1rem;
+}
+
+/* que el texto crezca y el botón quede siempre abajo */
+.proyecto-card .card-text {
+    flex: 1 1 auto;
+    margin-bottom: 1rem;
 }
 
 .btn-ver-mas {
@@ -352,6 +363,8 @@ p, span, li, label, input, textarea, select {
     border-radius: 25px;
     font-weight: 500;
     transition: background-color 0.3s ease;
+    margin-top: auto;
+    align-self: start;
 }
 
 .btn-ver-mas:hover {
@@ -553,7 +566,7 @@ footer a:hover {
     }
 }
 
-/* === UTILIDADES ADICIONALES === */
+/* === Fondos === */
 .text-verde {
     color: var(--verde) !important;
 }
